@@ -7,7 +7,7 @@
         <div class="left">
             <!-- <img src="@/assets/Images/library_login.jpg" alt=""> -->
             <div class="text">
-                <h1 class="title">BookShelf</h1>
+                <h1 class="title">Login</h1>
                 <div class="sub">Discover a world of books at BOOKSHELF – your literary haven.</div>
             </div>
             <div class="opacity"></div>
@@ -72,7 +72,7 @@
     }
     .right{
         background-color:#264653 ;
-        padding: 2rem;
+        /* padding: 2rem; */
         .icon{
             display: flex;
             justify-content: center;
