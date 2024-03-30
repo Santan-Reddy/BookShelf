@@ -1,5 +1,5 @@
 <script setup>
-
+import { RouterLink } from 'vue-router';
 </script>
 
 <template>
@@ -23,9 +23,13 @@
                     Password:
                     <input type="password" name="" id="">
                 </div>
-                <div class="forget"></div>
+                <div class="signup">
+                    <RouterLink to="/signup" class="signup">Don't have an account? Signup</RouterLink>
+                </div>
                 <div class="login_button">
-                    <button>Login</button>
+                    <RouterLink to="/home">
+                        <button>Login</button>
+                    </RouterLink>
                 </div>
             </div>
         </div>
@@ -101,6 +105,10 @@
                     padding: .5rem;
                     color: #fefae0;
                 }
+            }
+            .signup{
+                color:#F4A261;
+                margin-top:10px;
             }
             .login_button{
                 margin-top: 1.5rem;

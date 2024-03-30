@@ -2,6 +2,11 @@
 
 const menu=[
     {
+        name:"Home",
+        sub:null,
+        route:"home"
+    },
+    {
         name:"Genre",
         sub:[
             {
@@ -13,15 +18,18 @@ const menu=[
             {
                 name:"Action"
             },
-        ]
+        ],
+        route:"genre"
     },
     {
         name:"About",
-        sub:null
+        sub:null,
+        route:"about"
     },
     {
         name:"Contact",
-        sub:null
+        sub:null,
+        route:"contact"
     },
 ]
 </script>
@@ -39,9 +47,11 @@ const menu=[
         v-for="item in menu"
         :key="item.name"
         >
-            <div class="menu_item">
-                {{ item.name }}
-            </div>
+            <RouterLink :to=item.route class="menu_item">
+                <!-- <RouterLink :to=item.route class="item"> -->
+                    {{ item.name }}
+                <!-- </RouterLink> -->
+            </RouterLink>
         </div>
         <div class="cart">
             <span class="material-symbols-outlined">shopping_cart</span>
@@ -53,11 +63,11 @@ const menu=[
 nav{
     top:0;
     background-color: #F4A261;
-    height: 6rem;
+    height: 14vh;
     padding: 1rem;
     display: flex;
-    align-items: ;
     .icon{
+        width: 30%;
         align-items: center;
         img{
             height: 4rem;
@@ -72,9 +82,9 @@ nav{
         margin: 1rem 3rem ;
         display: flex;
         align-items: center;
-        /* width: 100%; */
+        width: 100%;
         input{
-            /* width: 100%; */
+            width: 100%;
             width: 30rem;
             border: none;
             outline: 0;
@@ -98,12 +108,15 @@ nav{
     .menu{
         display: flex;
         align-items: center;
+        width: 100%;
         .menu_item{
             padding: 1rem 2rem;
             cursor:pointer;
             margin: 0 .2rem;
             border-radius: 5px;
             transition: background-color .2s ease;
+                text-decoration: none;
+                color: black;
         }
         .menu_item:hover{
             background-color: #e69350;
@@ -119,9 +132,9 @@ nav{
             font-size: 2.5rem;
         }
     }
-}
-
-.flex{
-    display: flex;
+    
+    .flex{
+        display: flex;
+    }
 }
 </style>

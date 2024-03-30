@@ -1,11 +1,10 @@
 <script setup>
-
+import { RouterLink } from 'vue-router';
 </script>
 
 <template>
     <div class="main">
         <div class="left">
-            <!-- <img src="@/assets/Images/library_login.jpg" alt=""> -->
             <div class="text">
                 <h1 class="title">Signup</h1>
                 <div class="sub">Discover a world of books at BOOKSHELF – your literary haven.</div>
@@ -37,9 +36,13 @@
                     Password:
                     <input type="password" name="" id="">
                 </div>
-                <div class="forget"></div>
+                <div class="login">
+                    <RouterLink to="/login" class="login">Already have an account? Login</RouterLink>
+                </div>
                 <div class="login_button">
-                    <button>Login</button>
+                    <RouterLink to="/home">
+                        <button>Signup</button>
+                    </RouterLink>
                 </div>
             </div>
         </div>
@@ -123,7 +126,10 @@
                     color: #fefae0;
                     width: 100%;
                 }
-            
+                .login{
+                    color:#F4A261;
+                    margin-top:10px;
+                }
             .login_button{
                 margin-top: 1.5rem;
                 button{
